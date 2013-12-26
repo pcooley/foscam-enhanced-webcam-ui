@@ -6,13 +6,25 @@
 	<link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li>Settings</li>
-			</ul>
-		</nav>
-	</header>
+	<div id="nav">
+					<button class="btn"> settings </button>
+	</div>
+	<div id="content">
+		<div id="control">
+			<button onclick="cam.left()"> left </button>
+			<button onclick="cam.right()"> right </button>
+			<button onclick="cam.up()"> up </button>
+			<button onclick="cam.down()"> down </button>
+		</div>
+		<div id="video"> 
+			<img src="http://192.168.0.201/videostream.cgi?user=user&pwd=user"/>
+		</div>
+	</div>
     <script src="js/jquery-2.0.3.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/camera.js"></script>
+    <script>
+    	var cam = new Camera(config);
+    </script>
 </body>
 </html>
