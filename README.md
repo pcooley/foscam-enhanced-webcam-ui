@@ -12,9 +12,9 @@ Motivatation:
 
 
 # TODO list
-* github - basic directory structure 
-* develop base HTML page
-* create a constants.js (user/pwd/url ...)
+* DONE - github - basic directory structure 
+* DONE - develop base HTML page
+* DONE - create a constants.js (user/pwd/url ...)
 * sketch UI
 * develop camera interface (js)
 * implement a Foscam Fl8918W implementation of the camera interface
