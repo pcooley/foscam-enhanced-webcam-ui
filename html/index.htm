@@ -16,6 +16,13 @@
 			<button onclick="cam.right()"> right </button>
 			<button onclick="cam.up()"> up </button>
 			<button onclick="cam.down()"> down </button>
+			<button onclick="cam.up_left()"> up-left </button>
+			<button onclick="cam.up_right()"> up-right </button>
+			<button onclick="cam.down_left()"> down-left </button>
+			<button onclick="cam.down_right()"> down-right </button>
+			<button onclick="cam.ir_on()"> IR on </button>
+			<button onclick="cam.ir_off()"> IR off </button>
+			
 		</div>
 		<div id="video"> 
 			<img src="http://192.168.0.201/videostream.cgi?user=user&pwd=user"/>
@@ -24,8 +31,10 @@
     <script src="js/jquery-2.0.3.js"></script>
     <script src="js/constants.js"></script>
     <script src="js/camera.js"></script>
+    <script src="js/fi8918w.js"></script>
     <script>
-    	var cam = new Camera(config);
+	var foscam = new FI8918W();
+    	var cam = new Camera(config,foscam);
     </script>
 </body>
 </html>
