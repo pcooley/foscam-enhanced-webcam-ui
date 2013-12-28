@@ -5,7 +5,7 @@ function Camera (
 	this.camera = CamImpl;
 
 	this.left = function() {
-		this.camera.left();
+		this.camera.left(this.buildBaseURL(), this.buildQueryString());
 		if( console && console.log ) {
 	            console.log("left:" + config['server']);
 	            }
@@ -82,6 +82,14 @@ function Camera (
 	            console.log("ir_off" + config['server']);
 	            }
 	};
+	
+	this.buildBaseURL = function() {
+		return "http://" + config['server'] + "/";
+		}
+	
+	this.buildQueryString = function() {
+		return "&user=" + config['user'] + "&" + "pwd=" + config['password'];
+		}
 
 }
 

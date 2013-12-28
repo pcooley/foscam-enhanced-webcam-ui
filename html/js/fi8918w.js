@@ -1,6 +1,8 @@
 function FI8918W () {
 
-	this.left = function() {
+	this.left = function(baseURL, queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "decoder_control.cgi?command=6");
+		this.stop(baseURL, queryString);
 	};
 
 	this.right = function() {
@@ -27,12 +29,21 @@ function FI8918W () {
 	};
 
 	
-	this.stop =  function() {
+	this.stop =  function(baseURL,queryString) {
+		// this.makeAjaxRequest(baseURL, queryString, "decoder_control.cgi?command=6");
+
 	};
+	
 	this.ir_on =  function() {
 	};
 	
 	this.ir_off =  function() {
+	};
+
+	this.makeAjaxRequest = function(baseURL, queryString, url) {
+		$.ajax({
+			url: baseURL + url + queryString,	
+		});
 	};
 
 }
