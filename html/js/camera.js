@@ -5,28 +5,28 @@ function Camera (
 	this.camera = CamImpl;
 
 	this.left = function() {
-		this.camera.left(this.buildBaseURL(), this.buildQueryString());
+		this.camera.left(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("left:" + config['server']);
 	            }
 	};
 
 	this.right = function() {
-		this.camera.right();	
+		this.camera.right(this.buildBaseURL(), this.buildAuthQS());	
 		if( console && console.log ) {
 	            console.log("right" + config['server']);
 	            }
 	};
 	
 	this.up = function() {
-		this.camera.up();	
+		this.camera.up(this.buildBaseURL(), this.buildAuthQS());	
 		if( console && console.log ) {
 	            console.log("up" + config['server']);
 	            }
 	};
 	
 	this.down = function() {
-		this.camera.down();
+		this.camera.down(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("down" + config['server']);
 	            }
@@ -64,7 +64,7 @@ function Camera (
 
 	
 	this.stop =  function() {
-		this.camera.stop();
+		this.camera.stop(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("stop" + config['server']);
 	            }
@@ -87,7 +87,7 @@ function Camera (
 		return "http://" + config['server'] + "/";
 		}
 	
-	this.buildQueryString = function() {
+	this.buildAuthQS = function() {
 		return "&user=" + config['user'] + "&" + "pwd=" + config['password'];
 		}
 
