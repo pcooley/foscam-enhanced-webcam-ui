@@ -7,13 +7,33 @@
 	<link href="css/webcam-ui.css" rel="stylesheet">
 </head>
 <body>
-	<div id="nav">
-					<button class="btn"> settings </button>
-	</div>
-	<div id="content" class="content">
-		<div id="control">
-			<button onclick="cam.left()"> left </button>
-			<button onclick="cam.right()"> right </button>
+  <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Webcamera</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">Camera Settings</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="content">
+    	<div class="video"> 
+		<img src="http://192.168.0.201/videostream.cgi?user=user&pwd=user"/>
+    	</div>
+	<div class="control">
+		<button onclick="cam.left()"> left </button>
+		<button onclick="cam.right()"> right </button>
 			<button onclick="cam.up()"> up </button>
 			<button onclick="cam.down()"> down </button>
 			<button onclick="cam.up_left()"> up-left </button>
@@ -24,11 +44,8 @@
 			<button onclick="cam.ir_off()"> IR off </button>
 			
 		</div>
-		<div id="video"> 
-			<img src="http://192.168.0.201/videostream.cgi?user=user&pwd=user"/>
-		</div>
-	</div>
     <script src="js/jquery-2.0.3.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/constants.js"></script>
     <script src="js/camera.js"></script>
     <script src="js/fi8918w.js"></script>
