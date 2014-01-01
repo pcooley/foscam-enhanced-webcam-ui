@@ -15,17 +15,12 @@ body {
 }
 
 .content {
-	text-align: center;
+  text-align: center;
 	}
 	
-.video {
-	background-color: #eee;
-	padding: 20px;
-	margin-top: 10px;
-	margin-right: 10px;
-	margin-left: 10px;
-	text-align: center;
-	border-radius: 15px;
-	-moz-border-radius: 15px;
-	}
-	
+img {
+  border:1px solid #;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
