@@ -1,4 +1,31 @@
 
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  display: block;
+  position: static;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
 .content {
 	text-align: center;
 	}
+	
+.video {
+	background-color: #eee;
+	padding: 20px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	text-align: center;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	}
+	
