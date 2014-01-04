@@ -40,18 +40,46 @@
         <h3 class="panel-title">Camera Controls</h3>
       </div>
       <div class="panel-body">
+      <div class="container">
+      <div class="row-fluid">
+      <div class="span5"> </div>
+      <div class="span2"> 
+      <div class="ptzControls">
+      <table class="table table-bordered table-condensed"> 
+      	<tbody>
+      	  <tr>
+      	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.up_left()">up-left</button> </td>
+ 	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.up()">up</button></td>
+	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.up_right()">up-right</button></td>
+       	  </tr>
+       	  <tr>
+      	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.left()">left</button></td>
+ 	   <td>center</td>
+	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.right()">right</button></td>
+       	  </tr>
+       	  <tr>
+      	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.down_left()">down-left</button></td>
+ 	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.down()">down</button></td>
+	   <td><button type="button" class="btn btn-sm btn-primary" onclick="cam.down_right()">down-right</button></td>
+       	  </tr>
+       	</tbody>
+      </table>
+      </div>
+      </div>
+      <div class="span5"> </div>
+      </div>
       
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.left()">left</button> 
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.right()">right</button> 
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.up()">up</button> 
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.down()">down</button> 
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.up_left()">up-left</button> 
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.up_right()">up-right</button> 
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.down_left()">down-left</button> 
-      <button type="button" class="btn btn-sm btn-primary" onclick="cam.down_right()">down-right</button> 
+      </div>
+      </div>
+      </div>
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Misc Controls</h3>
+      </div>
+      <div class="panel-body">
+
       <button type="button" class="btn btn-sm btn-primary" onclick="cam.ir_on()">IR on</button> 
       <button type="button" class="btn btn-sm btn-primary" onclick="cam.ir_off()">IR off</button>
-      </div>
       </div>
      </div>
     </div>
