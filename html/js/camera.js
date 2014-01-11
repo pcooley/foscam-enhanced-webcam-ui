@@ -34,7 +34,7 @@ function Camera (
 	
 	
 	this.up_left = function() {
-		this.camera.up_left();
+		this.camera.up_left(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("up_left:" + config['server']);
 	            }
@@ -42,21 +42,21 @@ function Camera (
 
 
 	this.up_right = function() {
-		this.camera.up_right();
+		this.camera.up_right(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("up_right" + config['server']);
 	            }
 	};
 	
 	this.down_left = function() {
-		this.camera.down_left();
+		this.camera.down_left(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("down_left" + config['server']);
 	            }
 	};
 	
 	this.down_right = function() {
-		this.camera.down_right();
+		this.camera.down_right(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("down_right" + config['server']);
 	            }
@@ -69,15 +69,21 @@ function Camera (
 	            console.log("stop" + config['server']);
 	            }
 	};
+
+	this.center =  function() {
+		this.camera.center(this.buildBaseURL(), this.buildAuthQS());
+	};
+	
+	
 	this.ir_on =  function() {
-		this.camera.ir_on();
+		this.camera.ir_on(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("ir_on" + config['server']);
 	            }
 	};
 	
 	this.ir_off =  function() {
-		this.camera.ir_off();
+		this.camera.ir_off(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("ir_off" + config['server']);
 	            }

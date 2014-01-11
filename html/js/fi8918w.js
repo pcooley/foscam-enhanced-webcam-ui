@@ -24,17 +24,25 @@ function FI8918W () {
 	};
 	
 	
-	this.up_left = function() {
+	this.up_left = function(baseURL, queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "91");
+		this.afterCommandRequest(baseURL, queryString);
 	};
 
 
-	this.up_right = function() {
+	this.up_right = function(baseURL, queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "90");
+		this.afterCommandRequest(baseURL, queryString);
 	};
 	
-	this.down_left = function() {
+	this.down_left = function(baseURL, queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "93");
+		this.afterCommandRequest(baseURL, queryString);
 	};
 	
-	this.down_right = function() {
+	this.down_right = function(baseURL, queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "92");
+		this.afterCommandRequest(baseURL, queryString);
 	};
 
 	
@@ -43,14 +51,21 @@ function FI8918W () {
 
 	};
 	
+	this.center = function(baseURL,queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "25");
+
+	};
+	
 	this.afterCommandRequest = function(baseURL, queryString) {
 		setTimeout($.proxy(this.stop, this, baseURL, queryString), this.STOPDELAY);
 	}
 	
-	this.ir_on =  function() {
+	this.ir_on =  function(baseURL, queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "95");
 	};
 	
-	this.ir_off =  function() {
+	this.ir_off =  function(baseURL, queryString) {
+		this.makeAjaxRequest(baseURL, queryString, "94");
 	};
 
 	this.makeAjaxRequest = function(baseURL, queryString, commandNum) {
