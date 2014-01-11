@@ -28,6 +28,7 @@ img {
 
 .table td {
    text-align: center;
+   cursor: pointer;
 }
 
 .btn-circle {
