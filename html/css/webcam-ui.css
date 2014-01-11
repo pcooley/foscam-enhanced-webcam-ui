@@ -2,7 +2,7 @@
 body {
   padding-top: 70px;
   padding-bottom: 30px;
-  background: url(/img/cream_dust.png) repeat 0 0;
+  
 }
 
 .theme-dropdown .dropdown-menu {
@@ -15,10 +15,6 @@ body {
   margin: 5px 0;
 }
 
-.content {
-  text-align: center;
-	}
-	
 img {
   border:1px solid #;
   -webkit-border-radius: 10px;
@@ -26,3 +22,20 @@ img {
   border-radius: 10px;
 }
 
+.video {
+	text-align: center;
+	}
+
+.table td {
+   text-align: center;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+}
