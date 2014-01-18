@@ -94,7 +94,7 @@ function Camera (
 	};
 	
 	this.goto_preset =  function(preset) {
-		this.camera.goto_preset(this.buildBaseURL(), this.buildAuthQS());
+		this.camera.goto_preset(this.buildBaseURL(), this.buildAuthQS(), preset);
 		if( console && console.log ) {
 	            console.log("ir_off" + config['server']);
 	            }

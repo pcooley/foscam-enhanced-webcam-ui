@@ -3,7 +3,14 @@ function FI8918W () {
 	this.URLCONST = "decoder_control.cgi?command=";
 	this.STOPDELAY = 1000;
 	this.presetMap = {
-		"1" : "30"
+		"1" : "31",
+		"2" : "33",
+		"3" : "35",
+		"4" : "37",
+		"5" : "39",
+		"6" : "41",
+		"7" : "43",
+		"8" : "45"
 		}
 	
 	this.left = function(baseURL, queryString) {
