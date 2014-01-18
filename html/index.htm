@@ -19,14 +19,12 @@
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button> <a class="navbar-brand" href="#">Webcamera</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span></button> <a id="navtitle" class="navbar-brand" href="#">Camera Controls</a>
       </div>
 
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">Home</a></li>
-
-          <li><a href="#about">Camera Settings</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -47,19 +45,19 @@
         <table class="table table-bordered table-condensed"> 
          <tbody>
            <tr>
-            <td onclick="cam.up_left()"> <span class="arrow" data-angle="315" ></span></td>
+            <td onclick="cam.up_left()"> <span class="arrow-primary" data-angle="315" ></span></td>
       		<td onclick="cam.up()"><span class="arrow-primary" ></span></td>
-      		<td onclick="cam.up_right()"><span class="arrow" data-angle="45"></span></td>
+      		<td onclick="cam.up_right()"><span class="arrow-primary" data-angle="45"></span></td>
            </tr>
            <tr>
             <td onclick="cam.left()"> <span class="arrow-primary" data-angle="270" ></span></td>
-      		<td onclick="cam.center()" style="vertical-align:middle;"><span class="btn btn-default btn-circle"></span></td> 
+      		<td onclick="cam.center()" style="vertical-align:middle;"><span class="btn btn-primary btn-circle"></span></td> 
       		<td onclick="cam.right()"><span class="arrow-primary" data-angle="90" ></span></td>
            </tr>
            <tr>
-            <td onclick="cam.down_left()" ><span class="arrow" data-angle="225"></span></td>
+            <td onclick="cam.down_left()" ><span class="arrow-primary" data-angle="225"></span></td>
       		<td onclick="cam.down()"><span class="arrow-primary" data-angle="180" ></span></td>
-      		<td onclick="cam.down_right()"><span class="arrow" data-angle="135"></span></td>
+      		<td onclick="cam.down_right()"><span class="arrow-primary" data-angle="135"></span></td>
            </tr>
          </tbody>
         </table>
@@ -78,6 +76,7 @@
 	  	<tbody>
 	  		<tr> 
       		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.ir_on()">IR on</button></td>
+      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(1)">Preset 1</button></td>
       	</tr>
        	<tr>
       		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.ir_off()">IR off</button></td>
@@ -98,6 +97,7 @@
     <script type="text/javascript">
      var foscam = new FI8918W();
      var cam = new Camera(config,foscam);
+     cam.setPageTitle();
      $('.arrow, [class^=arrow-]').bootstrapArrows();
     </script>
   

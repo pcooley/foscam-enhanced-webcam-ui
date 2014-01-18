@@ -4,6 +4,10 @@ function Camera (
 	this.config = Config;
 	this.camera = CamImpl;
 
+	this.setPageTitle = function() {
+		$("#navtitle").text(	this.config["navtitle"]);
+	};
+
 	this.left = function() {
 		this.camera.left(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
@@ -84,6 +88,13 @@ function Camera (
 	
 	this.ir_off =  function() {
 		this.camera.ir_off(this.buildBaseURL(), this.buildAuthQS());
+		if( console && console.log ) {
+	            console.log("ir_off" + config['server']);
+	            }
+	};
+	
+	this.goto_preset =  function(preset) {
+		this.camera.goto_preset(this.buildBaseURL(), this.buildAuthQS());
 		if( console && console.log ) {
 	            console.log("ir_off" + config['server']);
 	            }

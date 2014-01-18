@@ -2,6 +2,9 @@ function FI8918W () {
 
 	this.URLCONST = "decoder_control.cgi?command=";
 	this.STOPDELAY = 1000;
+	this.presetMap = {
+		"1" : "30"
+		}
 	
 	this.left = function(baseURL, queryString) {
 		this.makeAjaxRequest(baseURL, queryString, "6");
@@ -66,6 +69,13 @@ function FI8918W () {
 	
 	this.ir_off =  function(baseURL, queryString) {
 		this.makeAjaxRequest(baseURL, queryString, "94");
+	};
+	
+	this.goto_preset =  function(baseURL, queryString, presetNumber) {
+		if (presetNumber in this.presetMap) {
+			this.makeAjaxRequest(baseURL, queryString, this.presetMap[presetNumber]);
+			}
+		
 	};
 
 	this.makeAjaxRequest = function(baseURL, queryString, commandNum) {
