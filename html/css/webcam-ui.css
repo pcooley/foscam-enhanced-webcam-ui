@@ -26,7 +26,7 @@ img {
 	text-align: center;
 	}
 
-.table td {
+td {
    text-align: center;
    cursor: pointer;
 }
@@ -40,3 +40,7 @@ img {
   line-height: 1.42;
   border-radius: 15px;
 }
+
+#misccontrol {
+	margin-top: 20px;	
+	}
