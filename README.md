@@ -21,8 +21,8 @@ Motivatation:
 
 * Known issue
  * The AJAX requests aren't really cross-domain safe.  It works but the server response is truncated.  Oh well.
-   > Console errors like
-   > XMLHttpRequest cannot load http://*.*.*.*/decoder_control.cgi?command=95&user=user&pwd=user. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1' is therefore not allowed access.   
+ > Console errors like
+ > XMLHttpRequest cannot load http://*.*.*.*/decoder_control.cgi?command=95&user=user&pwd=user. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1' is therefore not allowed access.   
 
 # TODO list
 * DONE - github - basic directory structure 
