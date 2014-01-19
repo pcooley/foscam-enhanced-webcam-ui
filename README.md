@@ -4,7 +4,7 @@
 Motivatation:
 * I receiving a Foscam camera as a gift 
 * reviewing the skin and capabilities of the built-in UI and it doesn't allow me to use this camera online publicly the way I want
-* The existing skin appears out-dated
+* The existing skin is out-dated
 
 * Objectives
 ** More modern, hipper looking UI (rounded corners and all the rest)
