@@ -15,8 +15,9 @@ Motivatation:
 * DONE - github - basic directory structure 
 * DONE - develop base HTML page
 * DONE - create a constants.js (user/pwd/url ...)
-* sketch UI
-* develop camera interface (js)
-* implement a Foscam Fl8918W implementation of the camera interface
+* DONE - sketch UI
+* DONE - develop camera interface (js)
+* DONE - implement a Foscam Fl8918W implementation of the camera interface
+* Iterate over the UI.  Over and Over.
 
 
