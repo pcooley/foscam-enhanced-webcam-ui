@@ -7,8 +7,8 @@ Motivatation:
 * The existing skin is out-dated
 
 * Objectives
-** More modern, hipper looking UI (rounded corners and all the rest)
-** Eliminate the need for a user/operator password to access UI
+ * More modern, hipper looking UI (rounded corners and all the rest)
+ * Eliminate the need for a user/operator password to access UI
 
 * Installation
 ** Check out this HTML/JS on your webserver
