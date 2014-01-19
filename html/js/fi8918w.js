@@ -1,6 +1,7 @@
 function FI8918W () {
 
-	this.URLCONST = "decoder_control.cgi?command=";
+	this.APIURLCONST = "decoder_control.cgi?command=";
+	this.STREAMURLCONST = "videostream.cgi?";
 	this.STOPDELAY = 1000;
 	this.presetMap = {
 		"1" : "31",
@@ -12,6 +13,10 @@ function FI8918W () {
 		"7" : "43",
 		"8" : "45"
 		}
+	
+	this.getVideoStreamEndPoint = function() {
+		return this.STREAMURLCONST;
+		};	
 	
 	this.left = function(baseURL, queryString) {
 		this.makeAjaxRequest(baseURL, queryString, "6");
@@ -87,10 +92,8 @@ function FI8918W () {
 
 	this.makeAjaxRequest = function(baseURL, queryString, commandNum) {
 		$.ajax({
-			url: baseURL + this.URLCONST + commandNum + queryString,	
+			url: baseURL + this.APIURLCONST + commandNum + queryString,	
 		});
 	};
 	
 }
-
-function nullDelay() {}

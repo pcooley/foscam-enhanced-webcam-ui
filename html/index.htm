@@ -31,7 +31,7 @@
   </div>
 
    
-  <div class="video"><div class="well">  <img src="http://192.168.0.201/videostream.cgi?user=user&amp;pwd=user"></div></div>
+  <div class="video"><div class="well">  <img id="videostream" src="img/video-placeholder.gif"></div></div>
 
      <div class="well">
      <div class="panel panel-default">
@@ -101,6 +101,7 @@
      var foscam = new FI8918W();
      var cam = new Camera(config,foscam);
      cam.setPageTitle();
+     cam.setVideoStream("#videostream");
      $('.arrow, [class^=arrow-]').bootstrapArrows();
     </script>
   
