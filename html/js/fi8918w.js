@@ -2,6 +2,7 @@ function FI8918W () {
 
 	this.APIURLCONST = "decoder_control.cgi?command=";
 	this.STREAMURLCONST = "videostream.cgi?";
+	this.SNAPSHOPURLCONST = "snapshot.cgi?";
 	this.STOPDELAY = 1000;
 	this.presetMap = {
 		"1" : "31",
@@ -16,6 +17,10 @@ function FI8918W () {
 	
 	this.getVideoStreamEndPoint = function() {
 		return this.STREAMURLCONST;
+		};
+	
+	this.getSnapshotEndPoint = function() {
+		return this.SNAPSHOPURLCONST;
 		};	
 	
 	this.left = function(baseURL, queryString) {

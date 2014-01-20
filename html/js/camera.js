@@ -1,6 +1,7 @@
 function Camera (
     Config, CamImpl
 ) {
+	this.isIE = document.all&&navigator.userAgent.toLowerCase().indexOf("msie")!=-1&&!navigator.userAgent.toLowerCase().indexOf("opera")!=-1;
 	this.config = Config;
 	this.camera = CamImpl;
 
@@ -9,7 +10,11 @@ function Camera (
 	};
 	
 	this.setVideoStream = function(id) {
-		srcString = this.buildBaseURL() + this.camera.getVideoStreamEndPoint() + this.buildAuthQS();
+		if (this.isIE) {
+			srcString = this.buildBaseURL() + this.camera.getSnapshotEndPoint() + this.buildAuthQS();		
+			} else {
+			srcString = this.buildBaseURL() + this.camera.getVideoStreamEndPoint() + this.buildAuthQS();
+		}
 		videoStreamEle = $(id);
 		videoStreamEle.attr(
 			'src',
