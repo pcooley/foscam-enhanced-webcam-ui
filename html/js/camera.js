@@ -21,7 +21,7 @@ function Camera (
 	};
 	
 	window.setStaticImage = function(id, baseUrl, snapshotEndPoint, authQS) {
-		var srcString = baseUrl + snapshotEndPoint +"ts=" + Date.now() + authQS;
+		var srcString = baseUrl + snapshotEndPoint +"ts=" + Date.now() + "&" + authQS;
 		videoStreamEle = $(id);
 		videoStreamEle.attr(	'src',	null );
 		videoStreamEle.attr(	'src', 	srcString	);
@@ -93,7 +93,7 @@ function Camera (
 		}
 	
 	this.buildAuthQS = function() {
-		return "&user=" + config['user'] + "&" + "pwd=" + config['password'];
+		return "user=" + config['user'] + "&" + "pwd=" + config['password'];
 		}
 
 }

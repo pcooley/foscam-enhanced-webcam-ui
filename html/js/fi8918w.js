@@ -97,7 +97,7 @@ function FI8918W () {
 
 	this.makeAjaxRequest = function(baseURL, queryString, commandNum) {
 		$.ajax({
-			url: baseURL + this.APIURLCONST + commandNum + queryString,	
+			url: baseURL + this.APIURLCONST + commandNum + "&" + queryString,	
 		});
 	};
 	
