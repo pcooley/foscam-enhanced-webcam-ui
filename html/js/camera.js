@@ -5,22 +5,35 @@ function Camera (
 	this.config = Config;
 	this.camera = CamImpl;
 
-	this.setPageTitle = function() {
+	this.setTitle = function() {
 		$("#navtitle").text(	this.config["navtitle"]);
+		document.title = this.config["navtitle"];
 	};
 	
 	this.setVideoStream = function(id) {
 		if (this.isIE) {
-			srcString = this.buildBaseURL() + this.camera.getSnapshotEndPoint() + this.buildAuthQS();		
+			this.simulateIEStreaming(id);
 			} else {
 			srcString = this.buildBaseURL() + this.camera.getVideoStreamEndPoint() + this.buildAuthQS();
+			videoStreamEle = $(id);
+			videoStreamEle.attr('src',	srcString );
 		}
+	};
+	
+	window.setStaticImage = function(id, baseUrl, snapshotEndPoint, authQS) {
+		var srcString = baseUrl + snapshotEndPoint +"ts=" + Date.now() + authQS;
 		videoStreamEle = $(id);
-		videoStreamEle.attr(
-			'src',
-			 srcString
-			);
-		};
+		videoStreamEle.attr(	'src',	null );
+		videoStreamEle.attr(	'src', 	srcString	);
+	}
+
+	this.simulateIEStreaming = function(id) {
+		var baseURL = this.buildBaseURL();
+		var qs = this.buildAuthQS();
+		var snapshot = this.camera.getSnapshotEndPoint();
+		window.setStaticImage(id, baseURL, snapshot, qs);
+		window.setInterval(function() { window.setStaticImage(id, baseURL, snapshot, qs); }, 500);
+	}
 
 	this.left = function() {
 		this.camera.left(this.buildBaseURL(), this.buildAuthQS());
