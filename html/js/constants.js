@@ -1,6 +1,6 @@
 var config = {
-	'server'   : '192.168.0.201',
-	'user'     : 'user',
-	'password' : 'user',
+	'server'   : '192.168.0.204',
+	'user'     : 'video',
+	'password' : 'video',
 	'navtitle': 'Driveway Camera',
 };
