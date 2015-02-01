@@ -12,7 +12,9 @@ function FI8918W () {
 		"5" : "39",
 		"6" : "41",
 		"7" : "43",
-		"8" : "45"
+		"8" : "45",
+		"9" : "47",
+		"10" : "479"
 		}
 	
 	this.getVideoStreamEndPoint = function() {
