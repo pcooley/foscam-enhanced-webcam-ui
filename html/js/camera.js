@@ -5,10 +5,28 @@ function Camera (
 	this.config = Config;
 	this.camera = CamImpl;
 
+	this.initialize = function() {
+	     this.setTitle();
+	     this.setPresetNames();
+     	     this.setVideoStream("#videostream");
+	
+	}
+	
+	this.setPresetNames = function() {
+		for (var i = 0; i < 10; i++) {
+			buttonSelector = "#preset"+ i;
+			buttonText = this.config["presets"][i];
+			domEle = $(buttonSelector);
+			domEle.text(buttonText);
+		}
+		
+	}
+
 	this.setTitle = function() {
-		$("#navtitle").text(	this.config["navtitle"]);
+		$("#navtitle").text(this.config["navtitle"]);
 		document.title = this.config["navtitle"];
 	};
+	
 	
 	this.setVideoStream = function(id) {
 		if (this.isIE) {
@@ -34,7 +52,7 @@ function Camera (
 		window.setStaticImage(id, baseURL, snapshot, qs);
 		window.setInterval(function() { window.setStaticImage(id, baseURL, snapshot, qs); }, 500);
 	}
-
+	
 	this.left = function() {
 		this.camera.left(this.buildBaseURL(), this.buildAuthQS());
 	};

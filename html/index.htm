@@ -70,20 +70,24 @@
 				<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.ir_off()">IR off</button></td>
        	</tr>
 	  		<tr> 
-      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(1)">Preset 1</button></td>
-      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(2)">Preset 2</button></td>
+      		<td><button id="preset0" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(1)">Preset 1</button></td>
+      		<td><button id="preset1" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(2)">Preset 2</button></td>
       	</tr>
       	<tr>
-      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(3)">Preset 3</button></td>
-     			<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(4)">Preset 4</button></td>			
+      		<td><button id="preset2" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(3)">Preset 3</button></td>
+     			<td><button id="preset3" ype="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(4)">Preset 4</button></td>			
      		</tr>    		
     		<tr>
-      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(5)">Preset 5</button></td>
-      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(6)">Preset 6</button></td>
+      		<td><button id="preset4" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(5)">Preset 5</button></td>
+      		<td><button id="preset5" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(6)">Preset 6</button></td>
       	</tr>
       	<tr>
-      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(7)">Preset 7</button></td>
-      		<td><button type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(8)">Preset 8</button></td>
+      		<td><button id="preset6" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(7)">Preset 7</button></td>
+      		<td><button id="preset7" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(8)">Preset 8</button></td>
+      	</tr>
+      	<tr>
+      		<td><button id="preset8" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(7)">Preset 9</button></td>
+      		<td><button id="preset9" type="button" class="btn btn-sm btn-primary" onclick="cam.goto_preset(8)">Preset 10</button></td>
       	</tr>
       </tbody>
     	</table>  
@@ -108,8 +112,7 @@
     <script type="text/javascript">
      var tvip = new TVIP400();
      var cam = new Camera(config,tvip);
-     cam.setTitle();
-     cam.setVideoStream("#videostream");
+     cam.initialize();
      $('.arrow, [class^=arrow-]').bootstrapArrows();
     </script>
   
